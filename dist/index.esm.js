@@ -2454,6 +2454,27 @@ var Container = styled.div(templateObject_1$8 || (templateObject_1$8 = __makeTem
 var PriceLink = styled.a(templateObject_2$3 || (templateObject_2$3 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"])));
 var SettingsEntry = styled.div(templateObject_3$1 || (templateObject_3$1 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"])), MENU_ENTRY_HEIGHT);
 var SocialEntry = styled.div(templateObject_4$1 || (templateObject_4$1 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"], ["\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: ", "px;\n  padding: 0 16px;\n"])), MENU_ENTRY_HEIGHT);
+var openInMetamaskA = function (callback) {
+    var provider = window.web3.currentProvider;
+    provider.sendAsync({
+        method: 'metamask_watchAsset',
+        params: {
+            "type": "ERC20",
+            "options": {
+                "address": "0x10a49f1fC8C604eA7f1c49bcc6ab2A8E58e77EA5",
+                "symbol": "BUFF",
+                "decimals": 18,
+                "image": "https://www.buffaloswap.org/images/logo_600.png",
+            },
+        },
+        id: Math.round(Math.random() * 100000),
+    }, function (err, added) {
+        console.log('provider returned', err, added);
+        if (err || 'error' in added) {
+            return;
+        }
+    });
+};
 var openInMetamask = function (callback) {
     var provider = window.web3.currentProvider;
     provider.sendAsync({
@@ -2476,7 +2497,7 @@ var openInMetamask = function (callback) {
     });
 };
 var PanelFooter = function (_a) {
-    var isPushed = _a.isPushed, pushNav = _a.pushNav; _a.toggleTheme; _a.isDark; var cakePriceUsd = _a.cakePriceUsd, cakePriceLink = _a.cakePriceLink; _a.currentLang; _a.langs; _a.setLang;
+    var isPushed = _a.isPushed, pushNav = _a.pushNav; _a.toggleTheme; _a.isDark; var cakePriceUsdA = _a.cakePriceUsdA, cakePriceLinkA = _a.cakePriceLinkA, cakePriceUsd = _a.cakePriceUsd, cakePriceLink = _a.cakePriceLink; _a.currentLang; _a.langs; _a.setLang;
     if (!isPushed) {
         return (React.createElement(Container, null,
             React.createElement(IconButton, { variant: "text", onClick: function () { return pushNav(true); } },
@@ -2491,6 +2512,13 @@ var PanelFooter = function (_a) {
             React.createElement("div", null,
                 React.createElement("a", { href: "https://rugdoc.io/project/buffalo-swap/", target: "_blank", rel: "nofollow" },
                     React.createElement("img", { src: "https://www.buffaloswap.org/images/rugdoc-review-badge-for-dark-bg.svg", alt: "rugdoc", width: "100" })))),
+        React.createElement(SocialEntry, null,
+            cakePriceUsdA ? (React.createElement(PriceLink, { href: cakePriceLinkA, target: "_blank" },
+                React.createElement(Icon$N, { width: "24px", mr: "8px" }),
+                React.createElement(Text, { color: "text", fontSize: "15px", bold: true }, "$" + cakePriceUsdA.toFixed(3)))) : (React.createElement(Skeleton, { width: 80, height: 24 })),
+            React.createElement(Button, { size: "sm", variant: "text", onClick: openInMetamaskA },
+                React.createElement(Icon$Z, null),
+                React.createElement(Icon$Q, null))),
         React.createElement(SocialEntry, null,
             cakePriceUsd ? (React.createElement(PriceLink, { href: cakePriceLink, target: "_blank" },
                 React.createElement(Icon$O, { width: "24px", mr: "8px" }),
