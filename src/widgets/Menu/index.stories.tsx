@@ -185,3 +185,4 @@ export const MenuEntryComponent: React.FC = () => {
     </Flex>
   );
 };
+
