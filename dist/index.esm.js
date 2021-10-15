@@ -2519,7 +2519,7 @@ var PanelFooter = function (_a) {
             React.createElement(Button, { size: "sm", variant: "text", onClick: openInMetamaskA },
                 React.createElement(Icon$Z, null),
                 React.createElement(Icon$Q, null))),
-        React.createElement(SocialEntry, null,
+        React.createElement(SocialEntry, { style: { top: '-16px', position: 'relative' } },
             cakePriceUsd ? (React.createElement(PriceLink, { href: cakePriceLink, target: "_blank" },
                 React.createElement(Icon$O, { width: "24px", mr: "8px" }),
                 React.createElement(Text, { color: "text", fontSize: "15px", bold: true }, "$" + cakePriceUsd.toFixed(3)))) : (React.createElement(Skeleton, { width: 80, height: 24 })),

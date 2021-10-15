@@ -2532,7 +2532,7 @@ var PanelFooter = function (_a) {
             React__default['default'].createElement(Button, { size: "sm", variant: "text", onClick: openInMetamaskA },
                 React__default['default'].createElement(Icon$Z, null),
                 React__default['default'].createElement(Icon$Q, null))),
-        React__default['default'].createElement(SocialEntry, null,
+        React__default['default'].createElement(SocialEntry, { style: { top: '-16px', position: 'relative' } },
             cakePriceUsd ? (React__default['default'].createElement(PriceLink, { href: cakePriceLink, target: "_blank" },
                 React__default['default'].createElement(Icon$O, { width: "24px", mr: "8px" }),
                 React__default['default'].createElement(Text, { color: "text", fontSize: "15px", bold: true }, "$" + cakePriceUsd.toFixed(3)))) : (React__default['default'].createElement(Skeleton, { width: 80, height: 24 })),

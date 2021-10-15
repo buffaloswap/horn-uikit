@@ -148,7 +148,7 @@ const PanelFooter: React.FC<Props> = ({
         )}
 	        <Button size="sm" variant="text" onClick={openInMetamaskA}><MetamaskIcon /><OpenNewIcon /></Button>
       </SocialEntry>
-      <SocialEntry>
+      <SocialEntry style={{top: '-16px', position: 'relative'}}>
         {cakePriceUsd ? (
           <PriceLink href={cakePriceLink} target="_blank">
             <PancakeRoundIcon width="24px" mr="8px" />
