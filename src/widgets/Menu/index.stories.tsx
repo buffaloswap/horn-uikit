@@ -30,6 +30,7 @@ export const Connected: React.FC = () => {
         setLang={noop}
         currentLang="EN"
         cakePriceUsd={0.23158668932877668}
+        cakePriceUsdA={0.23158668932877668}
         links={links}
         profile={null}
       >
@@ -100,6 +101,7 @@ export const WithNoProfile: React.FC = () => {
         setLang={noop}
         currentLang="EN"
         cakePriceUsd={0.23158668932877668}
+        cakePriceUsdA={0.23158668932877668}
         links={links}
         profile={{
           profileLink: "/profile",
