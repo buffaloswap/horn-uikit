@@ -142,6 +142,7 @@ export const WithProfile: React.FC = () => {
         setLang={noop}
         currentLang="EN"
         cakePriceUsd={0.23158668932877668}
+        cakePriceUsdA={0.23158668932877668}
         links={links}
         profile={{
           username: "cherokee",

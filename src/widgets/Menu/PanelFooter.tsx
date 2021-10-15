@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { PancakeRoundIcon, OpenNewIcon, CogIcon, MetamaskIcon,  SvgProps } from "../../components/Svg";
+import { PancakeRoundIcon, PancakeRoundIconA, OpenNewIcon, CogIcon, MetamaskIcon,  SvgProps } from "../../components/Svg";
 import Text from "../../components/Text/Text";
 import Flex from "../../components/Flex/Flex";
 import Dropdown from "../../components/Dropdown/Dropdown";
