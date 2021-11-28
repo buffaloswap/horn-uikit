@@ -33,6 +33,7 @@ export { default as OpenNewIcon } from "./Icons/OpenNew";
 export { default as PancakesIcon } from "./Icons/Pancakes";
 export { default as PancakeRoundIcon } from "./Icons/PancakeRound";
 export { default as PancakeRoundIconA } from "./Icons/PancakeRoundA";
+export { default as PancakeRoundIconB } from "./Icons/PancakeRoundB";
 export { default as PrizeIcon } from "./Icons/Prize";
 export { default as RemoveIcon } from "./Icons/Remove";
 export { default as VerifiedIcon } from "./Icons/Verified";

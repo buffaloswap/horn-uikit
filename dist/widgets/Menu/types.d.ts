@@ -36,6 +36,8 @@ export interface PanelProps {
     toggleTheme: (isDark: boolean) => void;
     cakePriceUsdA?: number;
     cakePriceLinkA?: string;
+    cakePriceUsdB?: number;
+    cakePriceLinkB?: string;
     cakePriceUsd?: number;
     cakePriceLink?: string;
     currentLang: string;

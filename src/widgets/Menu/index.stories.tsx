@@ -31,6 +31,7 @@ export const Connected: React.FC = () => {
         currentLang="EN"
         cakePriceUsd={0.23158668932877668}
         cakePriceUsdA={0.23158668932877668}
+        cakePriceUsdB={0.23158668932877668}
         links={links}
         profile={null}
       >
@@ -145,6 +146,7 @@ export const WithProfile: React.FC = () => {
         currentLang="EN"
         cakePriceUsd={0.23158668932877668}
         cakePriceUsdA={0.23158668932877668}
+        cakePriceUsdB={0.23158668932877668}
         links={links}
         profile={{
           username: "cherokee",
